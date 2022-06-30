@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="p{ font: 14pt song }                       推导        &amp;emsp;&amp;emsp;碰撞前后能量守恒,有  \begin{align} h\nu _0+m_0c^2&#x3D;h\nu +mc^2, \end{align}动量守恒,有  \begin{align} \begin{cases}     \frac{h}{\lambda}\sin \theta &#x3D;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="测试: 康普顿散射公式的推导">
+<meta property="og:url" content="http://example.com/2022/06/30/a226301/index.html">
+<meta property="og:site_name" content="归朝歌">
+<meta property="og:description" content="p{ font: 14pt song }                       推导        &amp;emsp;&amp;emsp;碰撞前后能量守恒,有  \begin{align} h\nu _0+m_0c^2&#x3D;h\nu +mc^2, \end{align}动量守恒,有  \begin{align} \begin{cases}     \frac{h}{\lambda}\sin \theta &#x3D;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2022/06/30/a226301/test2.png">
+<meta property="article:published_time" content="2022-06-29T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-06-30T10:03:28.209Z">
+<meta property="article:author" content="Qinyu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2022/06/30/a226301/test2.png"><title>测试: 康普顿散射公式的推导 | 归朝歌</title><link ref="canonical" href="http://example.com/2022/06/30/a226301/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">归朝歌</div><div class="header-banner-info__subtitle">穿越人海的教育寻访</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">测试: 康普顿散射公式的推导</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-06-30</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-06-30</span></span></div></header><div class="post-body"><style>
+p{ font: 14pt song }
+</style>
+
+
+        <h1 id="推导"   >
+          <a href="#推导" class="heading-link"><i class="fas fa-link"></i></a><a href="#推导" class="headerlink" title="推导"></a>推导</h1>
+      <p><img src="test2.png" alt=""></p>
+<p>&emsp;&emsp;碰撞前后能量守恒,有</p>
+<script type="math/tex; mode=display">
+\begin{align}
+h\nu _0+m_0c^2=h\nu +mc^2,
+\end{align}</script><p>动量守恒,有</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\begin{cases}
+    \frac{h}{\lambda}\sin \theta =mv\sin \varphi\\
+    \frac{h}{\lambda _0}=\frac{h}{\lambda}\cos \theta +mv\cos \varphi\\
+\end{cases},
+\end{align}</script><p>另有关系式</p>
+<script type="math/tex; mode=display">m=\frac{m_0}{\sqrt{1-\beta ^2}},\beta =\frac{v}{c},m^2c^2=m_{0}^{2}c^2+m^2v^2.</script><p>&emsp;&emsp;既然康普顿散射公式是描述散射前后光子的波长改变,那么自然要将以上公式中有关电子的运动<strong>变量</strong>消去, 即往消去</p>
+<script type="math/tex; mode=display">m,v,\sin \varphi ,\cos \varphi ,</script><p>这四个参量的方向上去进行. 对(2)式整理成如下形式: </p>
+<script type="math/tex; mode=display">
+\begin{align}
+    \begin{cases}
+    \frac{h}{\lambda}\sin \theta =mv\sin \varphi\\
+    \frac{h}{\lambda _0}-\frac{h}{\lambda}\cos \theta =mv\cos \varphi\\
+\end{cases},
+\end{align}</script><p>有恒等式$\sin ^2\varphi +\cos ^2\varphi \equiv 1$成立, 故</p>
+<script type="math/tex; mode=display">
+\begin{align}
+\begin{cases}
+    \frac{h^2}{\lambda ^2}\sin ^2\theta =m^2v^2\sin ^2\varphi\\
+    \left( \frac{h}{\lambda _0}-\frac{h}{\lambda}\cos \theta \right) ^2=m^2v^2\cos ^2\varphi\\
+\end{cases}\Rightarrow \frac{h^2}{\lambda ^2}\sin ^2\theta +\left( \frac{h}{\lambda _0}-\frac{h}{\lambda}\cos \theta \right) ^2=m^2v^2,
+\end{align}</script><p>据$m^2c^2=m_{0}^{2}c^2+m^2v^2\Rightarrow m^2v^2=m^2c^2-m_{0}^{2}c^2$, 则</p>
+<script type="math/tex; mode=display">\frac{h^2}{\lambda ^2}\sin ^2\theta +\left( \frac{h}{\lambda _0}-\frac{h}{\lambda}\cos \theta \right) ^2=m^2c^2-m_{0}^{2}c^2,</script><p>在$h\nu _0+m_0c^2=h\nu +mc^2$中可整理出</p>
+<script type="math/tex; mode=display">
+h\left( \nu _0-\nu \right) +m_0c^2=mc^2
+\\
+\Rightarrow \left( \frac{h}{\lambda _0}-\frac{h}{\lambda} \right) +m_0c=mc,</script><p>两边平方,得</p>
+<script type="math/tex; mode=display">
+\left( \frac{h}{\lambda _0}-\frac{h}{\lambda} \right) ^2+m_{0}^{2}c^2+2m_0c\left( \frac{h}{\lambda _0}-\frac{h}{\lambda} \right) =m^2c^2,</script><p>也就是</p>
+<script type="math/tex; mode=display">\left( \frac{h}{\lambda _0}-\frac{h}{\lambda} \right) ^2+2m_0c\left( \frac{h}{\lambda _0}-\frac{h}{\lambda} \right) =m^2c^2-m_{0}^{2}c^2,</script><p>从而</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+\frac{h^2}{\lambda ^2}\sin ^2\theta +\left( \frac{h}{\lambda _0}-\frac{h}{\lambda}\cos \theta \right) ^2=\left( \frac{h}{\lambda _0}-\frac{h}{\lambda} \right) ^2+2m_0c\left( \frac{h}{\lambda _0}-\frac{h}{\lambda} \right) 
+\\
+\frac{h^2}{\lambda ^2}+\frac{h^2}{\lambda _{0}^{2}}-\frac{2h^2\cos \theta}{\lambda \lambda _0}=\frac{h^2}{\lambda ^2}+\frac{h^2}{\lambda _{0}^{2}}-\frac{2h^2}{\lambda \lambda _0}+2m_0c\left( \frac{h}{\lambda _0}-\frac{h}{\lambda} \right) 
+\\
+\frac{h}{\lambda \lambda _0}-\frac{h\cos \theta}{\lambda \lambda _0}=m_0c\left( \frac{1}{\lambda _0}-\frac{1}{\lambda} \right) 
+\\
+\frac{h\left( 1-\cos \theta \right)}{\lambda \lambda _0}=m_0c\left( \frac{1}{\lambda _0}-\frac{1}{\lambda} \right) 
+\\
+\frac{h}{m_0c}\left( 1-\cos \theta \right) =\lambda \lambda _0\left( \frac{1}{\lambda _0}-\frac{1}{\lambda} \right) 
+\\
+\frac{h}{m_0c}\left( 1-\cos \theta \right) =\lambda -\lambda _0.
+\end{align*}</script><p>由此得到康普顿散射公式</p>
+<script type="math/tex; mode=display">\frac{h}{m_0c}\left( 1-\cos \theta \right) =\lambda -\lambda _0,</script><p>注意到, $\frac{h}{m_0c}$具有长度的量纲, 称之为电子的康普顿波长, 记作$\lambda _{\mathrm{ec}}$. 同时, 由于$1-\cos \theta \geqslant 0$, 因此碰撞后散射光子的波长$\lambda $是必然大于入射光子波长$\lambda_0$的, 故</p>
+<script type="math/tex; mode=display">\lambda _{\mathrm{ec}}\left( 1-\cos \theta \right) =\Delta \lambda ,</script><p>中$\Delta \lambda &gt;0$.</p>
+<p>下面考虑问题. </p>
+
+        <h3 id="散射光子能量与反冲电子动能"   >
+          <a href="#散射光子能量与反冲电子动能" class="heading-link"><i class="fas fa-link"></i></a><a href="#散射光子能量与反冲电子动能" class="headerlink" title="散射光子能量与反冲电子动能"></a>散射光子能量与反冲电子动能</h3>
+      <p>&emsp;&emsp;散射光子的波长为$\lambda$, 由$E=h\nu$, 得</p>
+<script type="math/tex; mode=display">E=\frac{hc}{\lambda}=\frac{hc}{\lambda _0+\frac{h}{m_0c}\left( 1-\cos \theta \right)},</script><p>我们常用频率来表出能量, 于是对康普顿散射公式进行整理:</p>
+<script type="math/tex; mode=display">\frac{h}{m_0c}\left( 1-\cos \theta \right) =\lambda -\lambda _0\Leftrightarrow \frac{h}{m_0c}\left( 1-\cos \theta \right) =\frac{c}{\nu}-\frac{c}{\nu _0},</script><p>于是</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+\frac{1}{m_0c^2}\left( 1-\cos \theta \right) +\frac{1}{h\nu _0}=\frac{1}{h\nu}
+\\
+\frac{1}{\frac{1}{m_0c^2}\left( 1-\cos \theta \right) +\frac{1}{h\nu _0}}=h\nu 
+\\
+h\nu =\frac{h\nu _0}{\frac{h\nu _0}{m_0c^2}\left( 1-\cos \theta \right) +1}
+\end{align*},</script><p>定义</p>
+<script type="math/tex; mode=display">\gamma \equiv \frac{h\nu _0}{m_0c^2},</script><p>于是</p>
+<script type="math/tex; mode=display">h\nu =\frac{h\nu _0}{\gamma \left( 1-\cos \theta \right) +1},</script><p>什么时候散射光子能量最小? 只需令$ \theta=\pi$, 立即有</p>
+<script type="math/tex; mode=display">\left( h\nu \right) _{\min}=\frac{h\nu _0}{2\gamma +1},</script><p>能量守恒, 反冲电子动能等于光子能量的变化量, 为</p>
+<script type="math/tex; mode=display">E_{k,\max}=h\nu _0-\left( h\nu \right) _{\min}=h\nu _0\left( 1-\frac{1}{2\gamma +1} \right) =\frac{2\gamma}{2\gamma +1}h\nu _0.</script></div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://example.com">Qinyu</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://example.com/2022/06/30/a226301/">http://example.com/2022/06/30/a226301/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-cn" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2022/06/30/a22630/"><span class="paginator-prev__text">测试文章</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A8%E5%AF%BC"><span class="toc-number">1.</span> <span class="toc-text">
+          推导</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%A3%E5%B0%84%E5%85%89%E5%AD%90%E8%83%BD%E9%87%8F%E4%B8%8E%E5%8F%8D%E5%86%B2%E7%94%B5%E5%AD%90%E5%8A%A8%E8%83%BD"><span class="toc-number">1.0.1.</span> <span class="toc-text">
+          散射光子能量与反冲电子动能</span></a></li></ol></li></ol></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/avatar.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">Creation</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">2</div><div class="sidebar-ov-state-item__name">归档</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-cn" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Qinyu</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.2.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script type="text/x-mathjax-config">var mathjaxMhchem = '';
+var mathJaxTex = {
+  equationNumbers: {
+    autoNumber: 'AMS'
+  }
+};
+
+if (false) {
+  mathjaxMhchem = 'https://cdn.jsdelivr.net/npm/mathjax-mhchem@3.3.2/mhchem.min.js';
+  MathJax.Ajax.config.path['mhchem'] = mathjaxMhchem;
+
+  mathJaxTex.extensions = [mathjaxMhchem];
+} else {
+  mathJaxTex.extensions = ['AMSmath.js','AMSsymbols.js'];
+}
+
+MathJax.Hub.Config({
+  menuSettings: {
+    zoom: 'None'
+  },
+  showMathMenu: false,
+  jax: ['input/TeX','output/CommonHTML'],
+  extensions: ['tex2jax.js'],
+  TeX: mathJaxTex,
+  tex2jax: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+
+MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+  MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+    if (data.display) {
+      var next = data.script.nextSibling;
+      while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling; }
+      if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next); }
+    }
+  });
+});
+
+MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i = 0; i < all.length; i++) {
+    document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
