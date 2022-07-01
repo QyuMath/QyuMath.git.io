@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="p{ font: 11pt song }   实际上, 对于一般的一阶常微分方程, 往往是初等解法无法求解或者不存在解析解的, 因此, 我们只介绍一些特殊的, 形式更为简单的一阶常微分方程的解法, 这是本文关注的重点, 至于相关的例题, 这里略去, 所以实际上本文主要是起到一个帮助复习的作用.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一阶常微分方程的基本解法">
+<meta property="og:url" content="http://example.com/2022/07/01/a22701/index.html">
+<meta property="og:site_name" content="归朝歌">
+<meta property="og:description" content="p{ font: 11pt song }   实际上, 对于一般的一阶常微分方程, 往往是初等解法无法求解或者不存在解析解的, 因此, 我们只介绍一些特殊的, 形式更为简单的一阶常微分方程的解法, 这是本文关注的重点, 至于相关的例题, 这里略去, 所以实际上本文主要是起到一个帮助复习的作用.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-06-30T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-07-01T10:27:47.439Z">
+<meta property="article:author" content="Qinyu">
+<meta name="twitter:card" content="summary"><title>一阶常微分方程的基本解法 | 归朝歌</title><link ref="canonical" href="http://example.com/2022/07/01/a22701/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">归朝歌</div><div class="header-banner-info__subtitle">寻访</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">一阶常微分方程的基本解法</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-07-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-07-01</span></span></div></header><div class="post-body"><style>
+p{ font: 11pt song }
+</style>
+
+<p>实际上, 对于一般的一阶常微分方程, 往往是初等解法无法求解或者不存在解析解的, 因此, 我们只介绍一些特殊的, 形式更为简单的一阶常微分方程的解法, 这是本文关注的重点, 至于相关的例题, 这里略去, 所以实际上本文主要是起到一个帮助复习的作用. </p>
+<span id="more"></span>
+
+        <h2 id="1-1-分离变量法"   >
+          <a href="#1-1-分离变量法" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-1-分离变量法" class="headerlink" title="1.1    分离变量法"></a>1.1    分离变量法</h2>
+      <p>对于一阶常微分方程</p>
+<script type="math/tex; mode=display">
+    \frac{\mathrm{d}y}{\mathrm{d}x}=f\left( x,y \right),</script><p>若$f\left( x,y \right)$可以写成</p>
+<script type="math/tex; mode=display">
+    f\left( x,y \right) =\varphi \left( x \right) \psi \left( y \right)</script><p>的形式(即$\varphi \left( x \right) $和$\psi \left( y \right) $分别仅是关于$x,y$的函数), 则</p>
+<script type="math/tex; mode=display">
+\frac{\mathrm{d}y}{\mathrm{d}x}=\varphi \left( x \right) \psi \left( y \right) \Rightarrow \frac{\mathrm{d}y}{\psi \left( y \right)}=\varphi \left( x \right) \mathrm{d}x,</script><p>两边积分, 得</p>
+<script type="math/tex; mode=display">
+        \int{\frac{\mathrm{d}y}{\psi \left( y \right)}}=\int{\varphi \left( x \right) \mathrm{d}x}+C,</script><p>其中$C$为积分常数. 这样就得到了相应微分方程的解. 特别地, 对于上式, 可以看作确定了隐函数关系$F\left( x,y,C \right) =0$, 毕竟不是每个能够分离变量的方程都能具体写成显函数$y=y\left( x \right) $的形式. </p>
+
+        <h2 id="1-2-一阶线性常微分方程"   >
+          <a href="#1-2-一阶线性常微分方程" class="heading-link"><i class="fas fa-link"></i></a><a href="#1-2-一阶线性常微分方程" class="headerlink" title="1.2 一阶线性常微分方程"></a>1.2 一阶线性常微分方程</h2>
+      <p>其基本形式如</p>
+<script type="math/tex; mode=display">
+    \frac{\mathrm{d}y}{\mathrm{d}x}+P\left( x \right) y=Q\left( x \right),</script><p>特别当$Q\left( x \right) \equiv 0$时, 上式变为可分离变量形式, 运用§1.1中的办法就可以求解, 即视</p>
+<script type="math/tex; mode=display">
+    f\left( x,y \right) =-P\left( x \right) y\Rightarrow \varphi \left( x \right) =-P\left( x \right) ,\psi \left( y \right) =y.</script><p>在本节中, $ Q\left( x \right) $一般不恒为零, 这时往往采用 ”常数变易法” 来处理, 它最早是由拉格朗日所提出. 其思路是, 对于 $ Q\left( x \right) =0 $, 即</p>
+<script type="math/tex; mode=display">
+    \frac{\mathrm{d}y}{\mathrm{d}x}+P\left( x \right) y=0</script><p>的情形, 采用分离变量法, 即</p>
+<script type="math/tex; mode=display">
+\begin{align*}\frac{\mathrm{d}y}{\mathrm{d}x}+P\left( x \right) y=0\\\Rightarrow \frac{\mathrm{d}y}{y}=-P\left( x \right) \mathrm{d}x\\\Rightarrow \int{\frac{\mathrm{d}y}{y}}=-\int{P\left( x \right) \mathrm{d}x}+C\\\Rightarrow \ln \left| y \right|=-\int{P\left( x \right) \mathrm{d}x}+C\\\Rightarrow y=\pm \mathrm{e}^{-\int{P\left( x \right) \mathrm{d}x}+C}=\pm \mathrm{e}^C\cdot \mathrm{e}^{-\int{P\left( x \right) \mathrm{d}x}}\\\Rightarrow y=C'\mathrm{e}^{-\int{P\left( x \right) \mathrm{d}x}}
+\end{align*},</script><p>这里最后一步我们用$C’$这个新的常数代替了$\pm \mathrm{e}^C$, 因为它们都是常数. 下面就是常数变易法的内容, 即将$C’$这个常数, 变易为一个函数$u\left( x \right) $, 并假定原先的微分方程</p>
+<script type="math/tex; mode=display">
+    \frac{\mathrm{d}y}{\mathrm{d}x}+P\left( x \right) y=Q\left( x \right)</script><p>的通解为$y=u\left( x \right) \cdot \mathrm{e}^{-\int{P\left( x \right) \mathrm{d}x}}$, 接着把这个预设出来的解代入到上面的方程中, 有</p>
+<script type="math/tex; mode=display">
+        \frac{\mathrm{d}}{\mathrm{d}x}\left[ u\mathrm{e}^{-\int{P\mathrm{d}x}} \right] +P\cdot u\mathrm{e}^{-\int{P\mathrm{d}x}}=Q\left( x \right),</script><p>这里$u$, $P$都是$u\left( x \right) $, $P\left( x \right) $的简写. 整理有</p>
+<script type="math/tex; mode=display">
+    u'\mathrm{e}^{-\int{P\mathrm{d}x}}+u\cdot \mathrm{e}^{-\int{P\mathrm{d}x}}\cdot \frac{\mathrm{d}}{\mathrm{d}x}\left( -\int{P\mathrm{d}x} \right) +P\cdot u\mathrm{e}^{-\int{P\mathrm{d}x}}=Q\left( x \right),</script><p>其中$\frac{\mathrm{d}}{\mathrm{d}x}\left( -\int{P\mathrm{d}x} \right) $相当于积分之后又求导, 相当于$P$什么都没变, 即结果为$-P$. 上式就写成</p>
+<script type="math/tex; mode=display">
+    u'\mathrm{e}^{-\int{P\mathrm{d}x}}-Pu\cdot \mathrm{e}^{-\int{P\mathrm{d}x}}+P\cdot u\mathrm{e}^{-\int{P\mathrm{d}x}}=Q\left( x \right),</script><p>后两项是互为相反数的, 最后只剩下</p>
+<script type="math/tex; mode=display">
+    u'\mathrm{e}^{-\int{P\mathrm{d}x}}=Q\left( x \right) \Leftrightarrow u'=Q\left( x \right) \mathrm{e}^{\int{P\mathrm{d}x}}\Rightarrow u\left( x \right) =\int{Q\left( x \right) \mathrm{e}^{\int{P\mathrm{d}x}}\mathrm{d}x}+A,</script><p>$A$为积分常数. 因此, 按照我们的假设, 原微分方程的解就是</p>
+<script type="math/tex; mode=display">
+    y=\left[ \int{Q\left( x \right) \mathrm{e}^{\int{P\mathrm{d}x}}\mathrm{d}x}+A \right] \cdot \mathrm{e}^{-\int{P\left( x \right) \mathrm{d}x}}.</script><p>“常数变易法” 一词中, “变” 是变换, “易” 也有交换的意思, 也就是说, 通过将齐次微分方程中的常数替换成一个未知函数, 并且代入非齐次方程中反过来确定这个未知函数的方法, 就是常数变易法. 类似于常用的待定系数法的思想.<br>不过, 在实际去解这样的方程时, 我们不可能按照这个思路从头到尾来一遍, 这样是十分繁琐的, 而通解的形式又不容易记忆, 那该怎么办呢?<br>实际上, 对于通解, 我们可以拆分成两个部分, 只需要记住两个部分的计算方法, 最后合起来就是通解的结果. 哪两个部分呢? </p>
+<p>考虑记</p>
+<script type="math/tex; mode=display">
+    v\left( x \right) =\mathrm{e}^{\int{P\left( x \right) \mathrm{d}x}},</script><p>首先计算出$v\left( x \right) $, 但是这个结果不要附加积分常数$c$, 接下来计算</p>
+<script type="math/tex; mode=display">
+    \int{v\left( x \right) Q\left( x \right) \mathrm{d}x},</script><p>这个结果附加积分常数$A$, 然后立即有通解</p>
+<script type="math/tex; mode=display">
+    y=\frac{\int{v\left( x \right) Q\left( x \right) \mathrm{d}x}+A}{v\left( x \right)},</script><p>另外可能存在歧义的地方在于, 其他参考资料对于方程的形式书写并不一致, 这里我是写成</p>
+<script type="math/tex; mode=display">
+    \frac{\mathrm{d}y}{\mathrm{d}x}+P\left( x \right) y=Q\left( x \right) ,</script><p>而有些是写作</p>
+<script type="math/tex; mode=display">
+    \frac{\mathrm{d}y}{\mathrm{d}x}=P\left( x \right) y+Q\left( x \right) ,\frac{\mathrm{d}y}{\mathrm{d}x}+P\left( x \right) y+Q\left( x \right) =0,</script><p>这就引起最后的结果形式并不一致, 所以在用通解公式时, 一定要将原方程凑成和通解公式所要求的形式, 从而确定$P\left( x \right) ,Q\left( x \right) $,最后再代入. </p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://example.com">Qinyu</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://example.com/2022/07/01/a22701/">http://example.com/2022/07/01/a22701/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-cn" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2022/06/30/a226301/"><span class="paginator-prev__text">康普顿散射公式的推导</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">
+          1.1    分离变量法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E4%B8%80%E9%98%B6%E7%BA%BF%E6%80%A7%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">
+          1.2 一阶线性常微分方程</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/avatar.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">The more you know who you are and what you want, the less you let things upset you.</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">归档</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-cn" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Qinyu</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.2.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script type="text/x-mathjax-config">var mathjaxMhchem = '';
+var mathJaxTex = {
+  equationNumbers: {
+    autoNumber: 'AMS'
+  }
+};
+
+if (false) {
+  mathjaxMhchem = 'https://cdn.jsdelivr.net/npm/mathjax-mhchem@3.3.2/mhchem.min.js';
+  MathJax.Ajax.config.path['mhchem'] = mathjaxMhchem;
+
+  mathJaxTex.extensions = [mathjaxMhchem];
+} else {
+  mathJaxTex.extensions = ['AMSmath.js','AMSsymbols.js'];
+}
+
+MathJax.Hub.Config({
+  menuSettings: {
+    zoom: 'None'
+  },
+  showMathMenu: false,
+  jax: ['input/TeX','output/CommonHTML'],
+  extensions: ['tex2jax.js'],
+  TeX: mathJaxTex,
+  tex2jax: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+
+MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+  MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+    if (data.display) {
+      var next = data.script.nextSibling;
+      while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling; }
+      if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next); }
+    }
+  });
+});
+
+MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i = 0; i < all.length; i++) {
+    document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
