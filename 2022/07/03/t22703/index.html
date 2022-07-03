@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="p{ font: 15pt song }  此题为一道反常积分的计算题, 由于被积函数中含有反三角函数 \(\arctan x\), 致使难以求出被积函数的原函数, 从而使用N-L公式, 代入上下限求解出积分值的做法并不容易. 这里, 我们采用逆用N-L公式的做法, 将\(\arctan x\)视作积分之后的结果, 进而还原成\(1&#x2F;(1+x^2)\), 这样对后续的积分是方便的.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="N-L公式的逆用">
+<meta property="og:url" content="http://example.com/2022/07/03/t22703/index.html">
+<meta property="og:site_name" content="归朝歌">
+<meta property="og:description" content="p{ font: 15pt song }  此题为一道反常积分的计算题, 由于被积函数中含有反三角函数 \(\arctan x\), 致使难以求出被积函数的原函数, 从而使用N-L公式, 代入上下限求解出积分值的做法并不容易. 这里, 我们采用逆用N-L公式的做法, 将\(\arctan x\)视作积分之后的结果, 进而还原成\(1&#x2F;(1+x^2)\), 这样对后续的积分是方便的.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-07-03T13:22:42.705Z">
+<meta property="article:author" content="Qinyu">
+<meta property="article:tag" content="数学竞赛">
+<meta property="article:tag" content="反常积分">
+<meta property="article:tag" content="二重积分">
+<meta property="article:tag" content="交换积分次序">
+<meta property="article:tag" content="N-L公式">
+<meta name="twitter:card" content="summary"><title>N-L公式的逆用 | 归朝歌</title><link ref="canonical" href="http://example.com/2022/07/03/t22703/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">归朝歌</div><div class="header-banner-info__subtitle">寻访</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">N-L公式的逆用</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-07-03</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-07-03</span></span></div></header><div class="post-body"><style>
+p{ font: 15pt song }
+</style>
+<p>此题为一道反常积分的计算题, 由于被积函数中含有反三角函数 <span
+class="math inline">\(\arctan x\)</span>, 致使难以求出被积函数的原函数,
+从而使用N-L公式, 代入上下限求解出积分值的做法并不容易. 这里,
+我们采用逆用N-L公式的做法, 将<span class="math inline">\(\arctan
+x\)</span>视作积分之后的结果, 进而还原成<span
+class="math inline">\(1/(1+x^2)\)</span>, 这样对后续的积分是方便的.</p>
+<span id="more"></span>
+
+        <h2 id="题目"   >
+          <a href="#题目" class="heading-link"><i class="fas fa-link"></i></a>题目</h2>
+      
+<p>计算</p>
+<p><span class="math display">\[\int_0^1{\frac{\mathrm{arc}\tan
+x}{x\sqrt{1-x^2}}\mathrm{d}x}.\]</span></p>
+
+        <h2 id="解析"   >
+          <a href="#解析" class="heading-link"><i class="fas fa-link"></i></a>解析</h2>
+      
+<p>我们知道, 在二重积分的习题中, 由于积分次序选取的不同,
+就会使第二个积分的被积函表达式不同, 就很可能导致这个积分做不出来,
+即很难求出原函数. 这时我们就考虑对这一积分次序做调整.</p>
+<p>例如, 对于二重积分</p>
+<p><span class="math display">\[\iint{f\left( x,y \right)
+\mathrm{d}x\mathrm{d}y},\]</span></p>
+<p>采用不同的积分次序之后就得到</p>
+<p><span class="math display">\[\int_a^b{g\left( x \right) \mathrm{d}x}
+\quad or \quad \int_c^d{h\left( y \right) \mathrm{d}y}, \]</span></p>
+<p>逆用N-L公式的关键就在于, 对于以上这两个定积分, 能否反向构造出<span
+class="math inline">\(f(x,y)\)</span>, 接着交换积分次序.</p>
+<p>此题中, 我们可以视</p>
+<p><span class="math display">\[\frac{\mathrm{arc}\tan
+x}{x\sqrt{1-x^2}}\]</span></p>
+<p>是二重积分中的第二次积分的结果,
+现在考虑基于此反向构造出原来第一次积分时的函数<span
+class="math inline">\(f(x,y)\)</span>.</p>
+<p><strong>注意到</strong>,</p>
+<p><span class="math display">\[\frac{\mathrm{arc}\tan
+x}{x\sqrt{1-x^2}}=\frac{\mathrm{arc}\tan x-\mathrm{arc}\tan
+0}{x-0}\frac{1}{\sqrt{1-x^2}},\]</span></p>
+<p>这提示我们, 如果记</p>
+<p><span class="math display">\[\varphi \left( x,y \right)
+=\frac{\arctan xy}{x\sqrt{1-x^2}},\]</span></p>
+<p>那么问题中的积分可以看成<span
+class="math inline">\(\varphi(x,y)\)</span>代入上下限 <span
+class="math inline">\(y=1,y=0\)</span> 的结果. 也就是</p>
+<p><span class="math display">\[\int_0^1{\psi \left( x,y \right)
+\mathrm{d}y}=\varphi \left( x,y \right)
+\mid_{0}^{1}=\frac{\mathrm{arc}\tan x}{x\sqrt{1-x^2}}.\]</span></p>
+<p>这表明, 如果现在有一个二元函数 <span
+class="math inline">\(\psi(x,y)\)</span>, 考虑它在 <span
+class="math inline">\([0,1]\times[0,1]\)</span> 上的积分, 如果我们先对
+<span class="math inline">\(y\)</span> 积分, 就能得到 <span
+class="math inline">\(\varphi(x,y)\)</span>, 再把关于 <span
+class="math inline">\(y\)</span> 的上下限代入,
+就是我们问题所求的积分了.</p>
+<p>因此, 现在的目标就是去寻找这样一个 <span
+class="math inline">\(\psi(x,y)\)</span>, 它对 <span
+class="math inline">\(y\)</span> 的积分是 <span
+class="math inline">\(\varphi (x,y)\)</span>, 即 <span
+class="math inline">\(\psi(x,y)\)</span> 是 <span
+class="math inline">\(\varphi(x,y)\)</span> 对 <span
+class="math inline">\(y\)</span> 的偏导数, 构造</p>
+<p><span class="math display">\[\psi \left( x,y \right) =\frac{\partial
+\varphi}{\partial
+y}=\frac{1}{x\sqrt{1-x^2}}\frac{x}{1+x^2y^2}=\frac{1}{\left( 1+x^2y^2
+\right) \sqrt{1-x^2}},\]</span></p>
+<p>然后对二重积分</p>
+<p><span class="math display">\[\iint\limits_{\left[ 0,1 \right] \times
+\left[ 0,1 \right]}{\frac{1}{\left( 1+x^2y^2 \right)
+\sqrt{1-x^2}}\mathrm{d}x\mathrm{d}y}\]</span></p>
+<p>交换积分次序, 如果先对 <span class="math inline">\(y\)</span> 积分,
+那么就会得到题中的积分, 而这是我们要求的, 所以只能先对 <span
+class="math inline">\(x\)</span> 积分, 再对 <span
+class="math inline">\(y\)</span> 积分, 即</p>
+<p><span
+class="math display">\[\int_0^1{\mathrm{d}y\int_0^1{\frac{1}{\left(
+1+x^2y^2 \right) \sqrt{1-x^2}}\mathrm{d}x}},\]</span></p>
+<p>作换元 <span class="math inline">\(x=\sin t\)</span>, 从而</p>
+<p><span class="math display">\[
+\begin{align*}
+\int_0^1{\frac{1}{\left( 1+x^2y^2 \right)
+\sqrt{1-x^2}}\mathrm{d}x}&amp;=\int_0^{\frac{\pi}{2}}{\frac{\cos
+t}{\left( 1+y^2\sin ^2t \right) \cos t}\mathrm{d}t}
+\\
+&amp;=\int_0^{\frac{\pi}{2}}{\frac{1}{1+y^2\sin ^2t}\mathrm{d}t}
+\\
+&amp;=\int_0^{\frac{\pi}{2}}{\frac{1}{\left( y^2+1 \right) \sin ^2t+\cos
+^2t}\mathrm{d}t}
+\\
+&amp;=\int_0^{\frac{\pi}{2}}{\frac{\sec ^2t}{\left( y^2+1 \right) \tan
+^2t+1}\mathrm{d}t}
+\\
+&amp;=\int_0^{\frac{\pi}{2}}{\frac{\mathrm{d}\tan t}{\left( y^2+1
+\right) \tan ^2t+1}}
+\\
+&amp;=\frac{1}{\sqrt{y^2+1}}\int_0^{\frac{\pi}{2}}{\frac{\mathrm{d}\left(
+\sqrt{y^2+1}\tan t \right)}{\left( y^2+1 \right) \tan ^2t+1}}
+\\
+&amp;=\frac{1}{\sqrt{y^2+1}}\left[ \mathrm{arc}\tan \left(
+\sqrt{y^2+1}\tan t \right) \right] \mid_{0}^{\frac{\pi}{2}}
+\\
+&amp;=\frac{\pi}{2\sqrt{y^2+1}},
+\end{align*}
+\]</span></p>
+<p>这样, 原来的二重积分就转化成了上式对 <span
+class="math inline">\(y\)</span> 在$$上的积分. 即</p>
+<p><span class="math display">\[
+\begin{align*}
+\int_0^1{\frac{\pi}{2\sqrt{1+y^2}}\mathrm{d}y}&amp;=\frac{\pi}{2}\int_0^1{\frac{1}{\sqrt{1+y^2}}\mathrm{d}y}=\frac{\pi}{2}\left(
+\mathrm{arsh}y \right) \mid_{0}^{1}
+\\
+&amp;=\frac{\pi}{2}\ln \left( 1+\sqrt{2} \right) .
+\end{align*}.
+\]</span></p>
+<p>综上, 原积分的结果也就是</p>
+<p><span class="math display">\[\frac{\pi}{2}\ln \left( 1+\sqrt{2}
+\right) .\]</span></p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://example.com">Qinyu</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://example.com/2022/07/03/t22703/">http://example.com/2022/07/03/t22703/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-cn" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E6%95%B0%E5%AD%A6%E7%AB%9E%E8%B5%9B/">数学竞赛</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E5%8F%8D%E5%B8%B8%E7%A7%AF%E5%88%86/">反常积分</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86/">二重积分</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E4%BA%A4%E6%8D%A2%E7%A7%AF%E5%88%86%E6%AC%A1%E5%BA%8F/">交换积分次序</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/N-L%E5%85%AC%E5%BC%8F/">N-L公式</a></span></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2022/07/01/a22701/"><span class="paginator-prev__text">一阶常微分方程的基本解法</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">1.</span> <span class="toc-text">
+          题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">
+          解析</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/avatar.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">The more you know who you are and what you want, the less you let things upset you.</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">归档</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-cn" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Qinyu</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.2.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script type="text/x-mathjax-config">var mathjaxMhchem = '';
+var mathJaxTex = {
+  equationNumbers: {
+    autoNumber: 'AMS'
+  }
+};
+
+if (false) {
+  mathjaxMhchem = 'https://cdn.jsdelivr.net/npm/mathjax-mhchem@3.3.2/mhchem.min.js';
+  MathJax.Ajax.config.path['mhchem'] = mathjaxMhchem;
+
+  mathJaxTex.extensions = [mathjaxMhchem];
+} else {
+  mathJaxTex.extensions = ['AMSmath.js','AMSsymbols.js'];
+}
+
+MathJax.Hub.Config({
+  menuSettings: {
+    zoom: 'None'
+  },
+  showMathMenu: false,
+  jax: ['input/TeX','output/CommonHTML'],
+  extensions: ['tex2jax.js'],
+  TeX: mathJaxTex,
+  tex2jax: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+
+MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+  MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+    if (data.display) {
+      var next = data.script.nextSibling;
+      while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling; }
+      if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next); }
+    }
+  });
+});
+
+MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i = 0; i < all.length; i++) {
+    document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
