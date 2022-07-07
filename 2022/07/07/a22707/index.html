@@ -1,0 +1,190 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/images/icons/favicon-16x16.png?v=2.6.2" type="image/png" sizes="16x16"><link rel="icon" href="/images/icons/favicon-32x32.png?v=2.6.2" type="image/png" sizes="32x32"><meta name="description" content="p{ font: 14pt song }  这是常用积分常数系列的第一期. 常用积分常数, 指的是对于一些定积分, 其结果收敛于某一个常数, 但是我们不能像 \(\sqrt{2},\displaystyle \frac{4}{3}\) 这样把它表示出来, 但是它们偏偏经常出现在一些积分的计算结果中, 为此, 我们取用一系列符号来特指这个结果, 就像圆周率 $$, 自然常数 \(\ma">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用积分常数(一)">
+<meta property="og:url" content="http://example.com/2022/07/07/a22707/index.html">
+<meta property="og:site_name" content="归朝歌">
+<meta property="og:description" content="p{ font: 14pt song }  这是常用积分常数系列的第一期. 常用积分常数, 指的是对于一些定积分, 其结果收敛于某一个常数, 但是我们不能像 \(\sqrt{2},\displaystyle \frac{4}{3}\) 这样把它表示出来, 但是它们偏偏经常出现在一些积分的计算结果中, 为此, 我们取用一系列符号来特指这个结果, 就像圆周率 $$, 自然常数 \(\ma">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-07-07T06:18:55.584Z">
+<meta property="article:author" content="Qinyu">
+<meta property="article:tag" content="数学">
+<meta property="article:tag" content="积分常数">
+<meta name="twitter:card" content="summary"><title>常用积分常数(一) | 归朝歌</title><link ref="canonical" href="http://example.com/2022/07/07/a22707/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/css/index.css?v=2.6.2"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/',
+  algolia: undefined,
+  assistSearch: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"复制","copySuccess":"复制成功","copyError":"复制失败"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">首页</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">归档</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">归朝歌</div><div class="header-banner-info__subtitle">做会做的,做能做的,做能做好的.</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">常用积分常数(一)</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">发表于</span><span class="post-meta-item__value">2022-07-07</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">更新于</span><span class="post-meta-item__value">2022-07-07</span></span></div></header><div class="post-body"><style>
+p{ font: 14pt song }
+</style>
+<p>这是常用积分常数系列的第一期. 常用积分常数, 指的是对于一些定积分,
+其结果收敛于某一个常数, 但是我们不能像 <span
+class="math inline">\(\sqrt{2},\displaystyle \frac{4}{3}\)</span>
+这样把它表示出来, 但是它们偏偏经常出现在一些积分的计算结果中, 为此,
+我们取用一系列符号来特指这个结果, 就像圆周率 $$, 自然常数 <span
+class="math inline">\(\mathrm{e}\)</span> 一样.</p>
+<span id="more"></span>
+
+        <h2 id="欧拉-马歇若尼常数"   >
+          <a href="#欧拉-马歇若尼常数" class="heading-link"><i class="fas fa-link"></i></a>欧拉-马歇若尼常数 $$</h2>
+      
+<p>   它来源于下面这个极限</p>
+<p><span class="math display">\[  \gamma = \lim_{n\rightarrow \infty}
+\left[ \left( \sum_{k=1}^n{\frac{1}{k}} \right) -\ln n \right]
+,\]</span></p>
+<p>我们先来证明上述极限是收敛的, 然后再来研究这个常数在解题中的应用.</p>
+
+        <h2 id="证明"   >
+          <a href="#证明" class="heading-link"><i class="fas fa-link"></i></a>证明</h2>
+      
+<p>取</p>
+<p><span class="math display">\[a_n=\left( \sum_{k=1}^n{\frac{1}{k}}
+\right) -\ln n,\]</span></p>
+<p>下面证明 <span class="math inline">\(a_n\)</span> 单调, 由于</p>
+<p><span class="math display">\[
+\begin{align*}
+a_n-a_{n-1}&amp;=\left( \sum_{k=1}^n{\frac{1}{k}} \right) -\ln n-\left(
+\sum_{k=1}^{n-1}{\frac{1}{k}} \right) +\ln \left( n-1 \right)
+\\&amp;=\frac{1}{n}+\ln \left( 1-\frac{1}{n} \right) ,
+\end{align*}
+\]</span></p>
+<p>利用不等式</p>
+<p><span class="math display">\[x&gt;0\Rightarrow x&gt;\ln \left( 1+x
+\right) ,\]</span></p>
+<p>有</p>
+<p><span class="math display">\[
+\begin{align*}
+a_n-a_{n-1} &amp; =\frac{1}{n}+\ln \left( 1-\frac{1}{n} \right)
+\\&amp;&gt;\ln \left( 1+\frac{1}{n} \right) +\ln \left( 1-\frac{1}{n}
+\right) \\ &amp; = \ln \left( 1-\frac{1}{n^2} \right) &lt;\ln 1=0,
+\end{align*}
+\]</span></p>
+<p>所以 <span class="math inline">\(a_n\)</span> 单调递减, 再来证明
+<span class="math inline">\(a_n\)</span> 有下界, 考虑下式</p>
+<p><span class="math display">\[\ln n=\ln \frac{2}{1}+\ln
+\frac{3}{2}+\cdots +\ln \frac{n}{n-1}=\sum_{k=1}^n{\ln
+\frac{k+1}{k}}=\sum_{k=1}^n{\ln \left( 1+\frac{1}{k}
+\right)},\]</span></p>
+<p>于是</p>
+<p><span
+class="math display">\[a_n=\sum_{k=1}^n{\frac{1}{k}}-\sum_{k=1}^n{\ln
+\left( 1+\frac{1}{k} \right)}=\sum_{k=1}^n{\left[ \frac{1}{k}-\ln \left(
+1+\frac{1}{k} \right) \right]},\]</span></p>
+<p>仍利用不等式</p>
+<p><span class="math display">\[x&gt;0\Rightarrow x&gt;\ln \left( 1+x
+\right) ,\]</span></p>
+<p>立即有</p>
+<p><span class="math display">\[\frac{1}{k}-\ln \left( 1+\frac{1}{k}
+\right) &gt;0\Rightarrow a_n&gt;0,\]</span></p>
+<p>从而 <span class="math inline">\(a_n\)</span> 单调递减, 且有下界
+<span class="math inline">\(0\)</span> , 进而 <span
+class="math inline">\(a_n\)</span> 收敛, 将这一结果记作 $$ . 即</p>
+<p><span class="math display">\[\lim_{n\rightarrow \infty} \left[
+\sum_{k=1}^n{\frac{1}{k}-\ln n} \right] =\gamma .\]</span></p>
+
+        <h2 id="应用"   >
+          <a href="#应用" class="heading-link"><i class="fas fa-link"></i></a>应用</h2>
+      
+<p><strong>求极限</strong></p>
+<p><span class="math display">\[\lim_{n\rightarrow \infty} \left(
+\frac{1}{n+1}+\frac{1}{n+2}+\cdots +\frac{1}{2n} \right) .\]</span></p>
+<p><strong>解析</strong>  置</p>
+<p><span class="math display">\[H\left( n \right)
+=1+\frac{1}{2}+\frac{1}{3}+\cdots +\frac{1}{n},\]</span></p>
+<p>则 <span class="math display">\[H\left( 2n \right)
+=1+\frac{1}{2}+\frac{1}{3}+\cdots +\frac{1}{2n},\]</span></p>
+<p>于是</p>
+<p><span class="math display">\[\lim_{n\rightarrow \infty} \left(
+\frac{1}{n+1}+\frac{1}{n+2}+\cdots +\frac{1}{2n} \right)
+=\lim_{n\rightarrow \infty} \left[ H\left( 2n \right) -H\left( n \right)
+\right] ,\]</span></p>
+<p>前面已经证明过,</p>
+<p><span class="math display">\[\lim_{n\rightarrow \infty} \left[
+H\left( n \right) -\ln n \right] =\gamma ,\]</span></p>
+<p>这表明, $H( n ) -n=+o( 1 ) , o( 1 ) $指 <span
+class="math inline">\(1\)</span> 的高阶无穷小. 从而</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;\lim_{n\rightarrow \infty} \left(
+\frac{1}{n+1}+\frac{1}{n+2}+\cdots +\frac{1}{2n} \right)
+=\lim_{n\rightarrow \infty} \left[ H\left( 2n \right) -H\left( n \right)
+\right] \\&amp;=\lim_{n\rightarrow \infty} \left[ \left( \ln 2n+\gamma
++o\left( 1 \right) \right) -\left( \ln n+\gamma +o\left( 1 \right)
+\right) \right] \\&amp;=\lim_{n\rightarrow \infty} \left[ \left( \ln
+2n-\ln n \right) +\left( \gamma -\gamma \right) \right] \\&amp;=\ln 2.
+\end{align*}
+\]</span></p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ 本文结束，感谢您的阅读 ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">本文作者: </span><span class="copyright-author__value"><a href="http://example.com">Qinyu</a></span></div><div class="copyright-link"><span class="copyright-link__name">本文链接: </span><span class="copyright-link__value"><a href="http://example.com/2022/07/07/a22707/">http://example.com/2022/07/07/a22707/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">版权声明: </span><span class="copyright-notice__value">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-cn" rel="external nofollow" target="_blank">BY-NC-SA</a> 许可协议。转载请注明出处！</span></div></div><div class="post-tags"><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="post-tags-item"><span class="post-tags-item__icon"><i class="fas fa-tag"></i></span><a class="post-tags-item__link" href="http://example.com/tags/%E7%A7%AF%E5%88%86%E5%B8%B8%E6%95%B0/">积分常数</a></span></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2022/07/03/t22703/"><span class="paginator-prev__text">N-L公式的逆用</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">文章目录</span><span class="sidebar-nav-ov">站点概览</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AC%A7%E6%8B%89-%E9%A9%AC%E6%AD%87%E8%8B%A5%E5%B0%BC%E5%B8%B8%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">
+          欧拉-马歇若尼常数 $$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%81%E6%98%8E"><span class="toc-number">2.</span> <span class="toc-text">
+          证明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">
+          应用</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/avatar.jpg" alt="avatar"></div><p class="sidebar-ov-author__text">The more you know who you are and what you want, the less you let things upset you.</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">归档</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-cn" target="_blank" rel="noopener" data-popover="知识共享许可协议" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">你已阅读了 </span><span class="sidebar-reading-info__num">0</span><span class="sidebar-reading-info__perc">%</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2022</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Qinyu</span></div><div><span>由 <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> 强力驱动</span><span> v6.2.0</span><span class="footer__devider">|</span><span>主题 - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.6.2</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script type="text/x-mathjax-config">var mathjaxMhchem = '';
+var mathJaxTex = {
+  equationNumbers: {
+    autoNumber: 'AMS'
+  }
+};
+
+if (false) {
+  mathjaxMhchem = 'https://cdn.jsdelivr.net/npm/mathjax-mhchem@3.3.2/mhchem.min.js';
+  MathJax.Ajax.config.path['mhchem'] = mathjaxMhchem;
+
+  mathJaxTex.extensions = [mathjaxMhchem];
+} else {
+  mathJaxTex.extensions = ['AMSmath.js','AMSsymbols.js'];
+}
+
+MathJax.Hub.Config({
+  menuSettings: {
+    zoom: 'None'
+  },
+  showMathMenu: false,
+  jax: ['input/TeX','output/CommonHTML'],
+  extensions: ['tex2jax.js'],
+  TeX: mathJaxTex,
+  tex2jax: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['\\[', '\\]']],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+
+MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+  MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+    if (data.display) {
+      var next = data.script.nextSibling;
+      while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling; }
+      if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next); }
+    }
+  });
+});
+
+MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i = 0; i < all.length; i++) {
+    document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script src="/js/utils.js?v=2.6.2"></script><script src="/js/stun-boot.js?v=2.6.2"></script><script src="/js/scroll.js?v=2.6.2"></script><script src="/js/header.js?v=2.6.2"></script><script src="/js/sidebar.js?v=2.6.2"></script></body></html>
